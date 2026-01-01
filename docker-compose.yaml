@@ -4,13 +4,13 @@ services:
     build:
       context: ./build
       args:
-        IMAGE_BASE: ${IMAGE_BASE:-ghcr.io/gitgud5000/base-image:v1-redo}
+        IMAGE_BASE: ${IMAGE_BASE:-mgagliardi/base-image:2026-01-01}
         PYTHON_VERSION: ${PYTHON_VERSION:-all}
         PYTHON_VENV_NAME: ${PYTHON_VENV_NAME:-python_312}
       tags:
-        - "ghcr.io/gitgud5000/python:${IMAGE_TAG:-py312}"
+        - "mgagliardi/python:${IMAGE_TAG:-py312}"
         
-    image: ghcr.io/gitgud5000/python:${IMAGE_TAG:-py312}
+    image: mgagliardi/python:${IMAGE_TAG:-py312}
     
     ## For Nvidia GPU's - Enabled for RTX 5090
     deploy:

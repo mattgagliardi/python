@@ -6,6 +6,12 @@ Run python in a cloud-first AI-Dock container. Nothing is added to the installed
 
 This image provides a great starting point for python development when used standalone but its also a solid foundation for extending upon.
 
+## Notes
+
+- I built this directly with `docker build --build-arg PYTHON_VERSION=3.12 --build-arg PYTHON_VENV_NAME=python_312 -t mgagliardi/python:v2-py312 .`
+- There's a reliance in this build on the source image having some particular env vars (ex. `VENV_DIR`, `XPU_TARGET`) exposed. Need to pay attention to this if things aren't working.
+- In `common.sh` I changed `python3.10` to `python3.12` to correspond with the intent of the image.
+- I pushed up to Docker Hub with `docker push mgagliardi/python:v2-py312`
 
 ## Documentation
 

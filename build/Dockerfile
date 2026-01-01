@@ -1,12 +1,12 @@
 # For build automation - Allows building from any ai-dock base image
-ARG IMAGE_BASE="ghcr.io/gitgud5000/base-image:v1-redo"
+ARG IMAGE_BASE="mgagliardi/base-image:2026-01-01"
 FROM ${IMAGE_BASE}
 
-LABEL org.opencontainers.image.source https://github.com/gitgud5000/python
+LABEL org.opencontainers.image.source=https://github.com/mattgagliardi/python
 
-LABEL org.opencontainers.image.description "Python development environment with CUDA 12.8.1 for RTX 5090"
+LABEL org.opencontainers.image.description="Python development environment with CUDA 12.9.1"
 
-LABEL maintainer="GitGud5000"
+LABEL maintainer="Matt Gagliardi"
 
 ENV JUPYTER_VENV=$VENV_DIR/jupyter
 ENV JUPYTER_VENV_PYTHON=$JUPYTER_VENV/bin/python
